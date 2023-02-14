@@ -53,7 +53,7 @@ body {
     background-color: white;
     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); */
     border-right: 1px solid #ddd;
-    left: -140px;
+    left: -150px;
     transition: .15s;
     z-index: 4;
     display: flex;
