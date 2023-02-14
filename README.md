@@ -3,7 +3,7 @@
 A simple animation generating application written in pure JavaScript.
 
 
-You can access the app via this link: https://framer.netlify.app/
+You can access the app via this link: https://framerr.netlify.app/
 
 
 
