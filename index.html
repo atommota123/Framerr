@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framer - Animation App</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <input type="color" id="picker" style="display: none;">
+    <div class="container">
+        <div class="screen">
+            <div class="menu">
+                <button id="menuButton"><i id="openMenuIcon" class="fa-solid fa-angle-right"></i></button>
+                <div class="colors">
+                    <div class="color" style="--color: #CB3434;"></div>
+                    <div class="color" style="--color: #39C921;"></div>
+                    <div class="color" style="--color: #000000;"></div>
+                    <div class="color" style="--color: #12B7DB;"></div>
+                    <div class="color" style="--color: #9C12CD;"></div>
+                    <div class="color" style="--color: #F8E00C;"></div>
+
+                    <label id="colorPicker" for="picker"></label>
+                </div>
+
+                <div class="other">
+                    <div class="add">
+                        <button id="add"><i class="fa-solid fa-plus"></i></button>
+                        <div class="add-panel hidden">
+                            <i class="fa-solid fa-crop-simple panel-icons" id="newFrame"></i>
+                            <i class="fa-solid fa-vector-square panel-icons" id="newObject"></i>
+                        </div>
+                    </div>
+                    <div class="fpsForm">
+                        <label for="fps">FPS:</label>
+                        <select name="fps" id="fps">
+                            <option value="60">60</option>
+                            <option value="30">30</option>
+                            <option value="15" selected="selected">15</option>
+                        </select>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+            <div class="objectsArea">
+                <div id="trace" class="object"></div>
+                <div class="object" id="object"> 
+            
+                </div>
+            </div>
+
+            <div class="controller">
+                <div class="controller-icons-area">
+                    <i id="backwardButton" class="fa-solid fa-backward controller-icons"></i>
+                    <i id="playButton" class="fa-solid fa-play controller-icons"></i>
+                    <i id="forwardButton" class="fa-solid fa-forward controller-icons"></i>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="frame-area">
+            
+            <p id="framesText">FRAMES</p>
+            <div class="frames">
+                <div onmouseover="showTrashButton(event)" onmouseout="showTrashButton(event)" onclick="selectFrame(event)" class="frame selected" data-location="">
+                    <i onclick="deleteFrame(event)" class="fa-regular hidden trash-icons fa-trash-can"></i>
+                    
+                </div>
+                
+                
+            </div>
+
+        </div>
+        <p id="frameCount">Frame Sayısı: 1</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
