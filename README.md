@@ -1,4 +1,4 @@
-# Framer
+# Framerr
 
 A simple animation generating application written in pure JavaScript.
 
